@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome to update</h1>
+        <table border="2">
+        <thead>
+            <td><h2>ProductId</h2></td>
+            <td><h2>ProductName</h2></td>
+            <td><h2>Description</h2></td>
+            <td><h2>Price</h2></td>
+            <td><h2>Discount</h2></td>
+            <td><h2>Edit</h2></td>
+            <td><h2>Delete</h2></td>
+        </thead>
+        
+        {% for i in form1 %}
+        <tr><td><h3>{{i.id}}</h3></td>
+            <td><h3>{{i.pname}}</h3></td>
+            <td><h3>{{i.pdesc}}</h3></td>
+            <td><h3>{{i.price}}</h3></td>
+            <td><h3>{{i.discount}}</h3></td>
+            <td><a href="/update/{{i.id}}/"> <h3>Edit</h3></a></td>
+            <td><a href="/delete/{{i.id}}/"> <h3>Delete</h3></a></td>
+        </tr>
+        {% endfor %}
+        </table>
+        <h3><a href="/create/"> <h3>Create Product</h3></a></h3>
+</body>
+</html>
